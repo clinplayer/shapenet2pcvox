@@ -1,6 +1,6 @@
 # Mini-script to convert and rename shapenet dataset
 
-This repository contains very simple mini-scripts to convert [Shapenet](https://www.shapenet.org/) models to voxel grids and point clouds.
+This repository contains very simple mini-scripts to convert [Shapenet](https://www.shapenet.org/) models to voxel grids and point clouds and rename them.
 
 <img src="image/teaser.png" width="70%" height="70%"/>
 
