@@ -12,7 +12,7 @@ python demo.py --shapenet_root shapenet --category_name 03001627 --output_root s
 ```
 This demo takes as input the path to the root directory of the shapenet dataset and the name of a category. 
 
-It first converts the mesh models (.obj) to point clouds (.ply) by ramdom sampling, then converts the sampled point clouds to voxels (.binvox) and finally converts the original mesh models to voxels (.binvox). The results are renamed and saved in `shapenet_convert`.
+It first converts the mesh models (.obj) to point clouds (.ply) by random sampling, then converts the sampled point clouds to voxels (.binvox) and finally converts the original mesh models to voxels (.binvox). The results are renamed and saved in shapenet_convert.
 
 * Rename
 
@@ -75,9 +75,8 @@ shapenet_convert
 * Installation
 
 You need to install [NumPy](https://numpy.org/) and [PyntCloud](https://github.com/daavoo/pyntcloud). 
-This code is tested under Python 3.7.4, NumPy 1.17.2 on Windows 10. We ackonwledge the code and tools from [binvox](https://www.patrickmin.com/binvox/).
+This code is tested under Python 3.7.4, NumPy 1.17.2 on Windows 10. We acknowledge the code and tools from [binvox](https://www.patrickmin.com/binvox/).
 
 * Linux version
 
-Changing the code to a linux version should be trival
-
+Changing the code to a Linux version should be trivial.

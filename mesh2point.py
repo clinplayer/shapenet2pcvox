@@ -55,9 +55,8 @@ def sample_on_trianlge(vertices, faces, vertex_normals, face_normals, num_sample
     return sampled_v, sampled_n, sampled_f_id
 
     
-def mesh2point(input_path, output_path, num_sample, noise=0.0):
+def mesh2point(input_path, output_path, num_sample):
     
     v, f, vn, fn = shape_rw.read_mesh_obj(input_path)
     v, vn, fid = sample_on_trianlge(v, f, vn, fn, num_sample)
-    
     shape_rw.write_point_ply(v, vn, output_path)
