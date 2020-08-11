@@ -2,7 +2,7 @@
 
 This repository contains very simple mini-scripts to convert shapenet models to voxel grids and point clouds.
 
-<img src="image/teaser.png" width="70% height="70%"/>
+<img src="image/teaser.png" width="70%" height="70%"/>
 
 
 ## Usage
@@ -19,32 +19,32 @@ It first converts the mesh models (.obj) to point clouds (.ply) by ramdom sampli
 The original file structure of a category in shapenet, where we are only interested in the shape id and model_normalized.obj.
 ```
 shapenet_root
-©¸©¤03001627
-    ©À©¤1a6f615e8b1b5ae4dbbc9440457e303e
-    ©¦  ©À©¤images
-    ©¦  ©¦      texture0.jpg
-    ©¦  ©¦      texture1.jpg
-    ©¦  ©¦
-    ©¦  ©¸©¤models
-    ©¦          model_normalized.json
-    ©¦          model_normalized.mtl
-    ©¦          model_normalized.obj
-    ©¦
-    ©À©¤1a74a83fa6d24b3cacd67ce2c72c02e
-    ©¦  ©À©¤images
-    ©¦  ©¦      texture0.jpg
-    ©¦  ©¦
-    ©¦  ©¸©¤models
-    ©¦          model_normalized.json
-    ©¦          model_normalized.mtl
-    ©¦          model_normalized.obj
-    ©¦
-    ©¸©¤1a8bbf2994788e2743e99e0cae970928
-        ©À©¤images
-        ©¦      texture0.jpg
-        ©¦      texture1.jpg
-        ©¦
-        ©¸©¤models
+â””â”€03001627
+    â”œâ”€1a6f615e8b1b5ae4dbbc9440457e303e
+    â”‚  â”œâ”€images
+    â”‚  â”‚      texture0.jpg
+    â”‚  â”‚      texture1.jpg
+    â”‚  â”‚
+    â”‚  â””â”€models
+    â”‚          model_normalized.json
+    â”‚          model_normalized.mtl
+    â”‚          model_normalized.obj
+    â”‚
+    â”œâ”€1a74a83fa6d24b3cacd67ce2c72c02e
+    â”‚  â”œâ”€images
+    â”‚  â”‚      texture0.jpg
+    â”‚  â”‚
+    â”‚  â””â”€models
+    â”‚          model_normalized.json
+    â”‚          model_normalized.mtl
+    â”‚          model_normalized.obj
+    â”‚
+    â””â”€1a8bbf2994788e2743e99e0cae970928
+        â”œâ”€images
+        â”‚      texture0.jpg
+        â”‚      texture1.jpg
+        â”‚
+        â””â”€models
                 model_normalized.json
                 model_normalized.mtl
                 model_normalized.obj
@@ -54,18 +54,18 @@ The file structure of the output folder after running the demo
 
 ```
 shapenet_convert
-©¸©¤03001627
-    ©À©¤pc
-    ©¦      1a6f615e8b1b5ae4dbbc9440457e303e.ply
-    ©¦      1a74a83fa6d24b3cacd67ce2c72c02e.ply
-    ©¦      1a8bbf2994788e2743e99e0cae970928.ply
-    ©¦
-    ©À©¤pc_vox
-    ©¦      1a6f615e8b1b5ae4dbbc9440457e303e.binvox
-    ©¦      1a74a83fa6d24b3cacd67ce2c72c02e.binvox
-    ©¦      1a8bbf2994788e2743e99e0cae970928.binvox
-    ©¦
-    ©¸©¤vox
+â””â”€03001627
+    â”œâ”€pc
+    â”‚      1a6f615e8b1b5ae4dbbc9440457e303e.ply
+    â”‚      1a74a83fa6d24b3cacd67ce2c72c02e.ply
+    â”‚      1a8bbf2994788e2743e99e0cae970928.ply
+    â”‚
+    â”œâ”€pc_vox
+    â”‚      1a6f615e8b1b5ae4dbbc9440457e303e.binvox
+    â”‚      1a74a83fa6d24b3cacd67ce2c72c02e.binvox
+    â”‚      1a8bbf2994788e2743e99e0cae970928.binvox
+    â”‚
+    â””â”€vox
             1a6f615e8b1b5ae4dbbc9440457e303e.binvox
             1a74a83fa6d24b3cacd67ce2c72c02e.binvox
             1a8bbf2994788e2743e99e0cae970928.binvox
