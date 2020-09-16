@@ -86,30 +86,36 @@ def read_mesh_off(path):
     return pts, faces
 
     
-def read_point_ply(path):
+def load_PC_ply(pc_filepath, expected_point=2000):
     
-    fopen = open(path, 'r', encoding='utf-8')
+    fopen = open(pc_filepath, 'r', encoding='utf-8')
     lines = fopen.readlines()
     linecount=0
     
-    pts=np.zeros((1,3),np.float64)
+    pts=np.zeros((expected_point,3),np.float64)
 
     total_point=0
     sample_interval=0
     feed_point_count=0
 
+    start_number = False
     for line in lines:
         linecount=linecount+1
         word=line.split()
 
-        if linecount==4:
+        if word[0] == 'element' and word[1] == 'vertex':
             total_point=int(word[2])
-            pts=np.zeros((total_point,3), np.float64) 
             continue
 
-        if linecount>13:
+        if start_number == True:
             pts[feed_point_count, :] = np.float64(word[0:3])
             feed_point_count+=1
+
+        if word[0] == 'end_header':
+            start_number = True
+
+        if feed_point_count >= expected_point:
+            break
 
     fopen.close()
     return pts
