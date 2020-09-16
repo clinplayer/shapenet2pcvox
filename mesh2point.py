@@ -54,7 +54,15 @@ def sample_on_trianlge(vertices, faces, vertex_normals, face_normals, num_sample
     
     return sampled_v, sampled_n, sampled_f_id
 
-    
+def normalize(vertices, max_size=1):
+    points_max = np.max(vertices, axis=0)
+    points_min = np.min(vertices, axis=0)
+    vertices_center = (points_max + points_min) / 2
+    points = vertices - vertices_center[None, :]
+    max_radius = np.max(np.sqrt(np.sum(points * points, axis=1)))
+    vertices = points / max_radius * max_size / 2.0
+    return vertices
+
 def mesh2point(input_path, output_path, num_sample):
     
     v, f, vn, fn = shape_rw.read_mesh_obj(input_path)
