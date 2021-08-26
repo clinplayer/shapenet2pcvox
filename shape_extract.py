@@ -10,8 +10,9 @@ def get_filelist(category_folder):
         for file in files:
             if os.path.splitext(file)[1] == '.obj':
                 filepath_list.append(os.path.join(root, file))
-                file_code=root.split('\\')[2]
-                filename_list.append(file_code)
+                path_code=root.split('\\')
+                shape_code=path_code[len(path_code)-2]
+                filename_list.append(shape_code)
     
     return filename_list, filepath_list
 
